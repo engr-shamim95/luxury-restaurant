@@ -45,19 +45,19 @@
     <!-- Main Navigation Header -->
     <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-amber-100/80 shadow-sm transition-all">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
+            <div class="flex items-center justify-between min-h-[5rem] py-2">
                 <!-- Brand / Logo -->
                 <div class="flex items-center gap-3 min-w-0">
-                    <a href="{{ route('home') }}" class="flex items-center gap-3 group min-w-0">
+                    <a href="{{ route('home') }}" class="flex flex-col sm:flex-row items-start sm:items-center gap-0.5 sm:gap-3 group min-w-0">
                         @if($siteLogo)
-                            <img src="{{ $siteLogo }}" alt="{{ $siteName }}" class="h-10 w-auto object-contain">
+                            <img src="{{ $siteLogo }}" alt="{{ $siteName }}" class="h-8 sm:h-10 w-auto object-contain">
                         @else
-                            <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-amber-600 to-orange-500 flex items-center justify-center text-white shadow-md shadow-amber-500/20 group-hover:scale-105 transition-transform duration-200">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                            <div class="w-8 h-8 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-tr from-amber-600 to-orange-500 flex items-center justify-center text-white shadow-md shadow-amber-500/20 group-hover:scale-105 transition-transform duration-200">
+                                <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
                             </div>
                         @endif
                         <div class="flex flex-col min-w-0">
-                            <span class="font-extrabold text-lg sm:text-2xl text-gray-900 tracking-tight leading-tight group-hover:text-amber-600 transition-colors truncate max-w-[130px] sm:max-w-none">
+                            <span class="font-extrabold text-base sm:text-2xl text-gray-900 tracking-tight leading-tight group-hover:text-amber-600 transition-colors truncate max-w-[150px] sm:max-w-none">
                                 {{ $siteName }}
                             </span>
                             @if($siteTagline)
