@@ -3,7 +3,7 @@
 @section('title', 'Checkout — ' . $siteName)
 
 @section('content')
-    <div class="py-10 sm:py-16">
+    <div class="py-10 sm:py-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h1 class="text-3xl font-black text-gray-900 tracking-tight mb-8">
                 Complete Your Order

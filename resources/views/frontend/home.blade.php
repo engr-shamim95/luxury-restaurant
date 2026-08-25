@@ -21,7 +21,7 @@
                 ✦ &ensp; Welcome to &ensp; ✦
             </p>
 
-            <h1 class="text-5xl sm:text-7xl lg:text-[5.5rem] text-white leading-[1.05] mb-8 font-bold"
+            <h1 class="text-4xl sm:text-7xl lg:text-[5.5rem] text-white leading-[1.05] mb-8 font-bold"
                 style="font-family: 'Playfair Display', serif;">
                 {{ $heroTitle ?: $siteName }}
             </h1>
@@ -63,7 +63,7 @@
     {{-- ═══════════════════════════════════════════════════
         STORY — Elegant text-only statement
     ═══════════════════════════════════════════════════ --}}
-    <section class="py-28 sm:py-36 bg-white">
+    <section class="py-16 sm:py-36 bg-white">
         <div class="max-w-3xl mx-auto text-center px-6">
             <span class="text-amber-600 tracking-[0.3em] uppercase text-[10px] font-semibold mb-6 block">Our Philosophy</span>
             <h2 class="text-3xl sm:text-5xl text-gray-900 leading-tight mb-10" style="font-family: 'Playfair Display', serif;">
@@ -84,14 +84,14 @@
         CATEGORIES — Tall editorial-style cards
     ═══════════════════════════════════════════════════ --}}
     @if($featuredCategories->isNotEmpty())
-        <section class="py-24 sm:py-28 bg-gray-950">
+        <section class="py-16 sm:py-16 bg-gray-950">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <span class="text-amber-500 tracking-[0.3em] uppercase text-[10px] font-semibold mb-4 block">Discover</span>
                     <h2 class="text-4xl sm:text-5xl text-white" style="font-family: 'Playfair Display', serif;">Our Menu</h2>
                 </div>
 
-                <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
                     @foreach($featuredCategories as $category)
                         <a href="{{ route('menu', ['category' => $category->slug]) }}"
                            class="group relative block aspect-[3/4] overflow-hidden bg-gray-900 cursor-pointer">
@@ -121,7 +121,7 @@
         FEATURED DISHES — Clean editorial grid
     ═══════════════════════════════════════════════════ --}}
     @if($featuredProducts->isNotEmpty())
-        <section class="py-28 sm:py-36 bg-white">
+        <section class="py-16 sm:py-36 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-20">
                     <span class="text-amber-600 tracking-[0.3em] uppercase text-[10px] font-semibold mb-4 block">Chef's Selection</span>
@@ -185,7 +185,7 @@
     {{-- ═══════════════════════════════════════════════════
         TESTIMONIAL / QUOTE — Dark cinematic strip
     ═══════════════════════════════════════════════════ --}}
-    <section class="relative py-28 sm:py-36 bg-gray-950 overflow-hidden">
+    <section class="relative py-16 sm:py-36 bg-gray-950 overflow-hidden">
         {{-- Subtle background image --}}
         <div class="absolute inset-0 bg-cover bg-center opacity-15"
              style="background-image: url('{{ asset('storage/settings/hero-bg.jpg') }}');"></div>
@@ -206,7 +206,7 @@
     {{-- ═══════════════════════════════════════════════════
         FINAL CTA — Order / Visit strip
     ═══════════════════════════════════════════════════ --}}
-    <section class="py-24 bg-white">
+    <section class="py-16 bg-white">
         <div class="max-w-4xl mx-auto px-6 text-center">
             <span class="text-amber-600 tracking-[0.3em] uppercase text-[10px] font-semibold mb-6 block">Ready?</span>
             <h2 class="text-3xl sm:text-5xl text-gray-900 mb-8" style="font-family: 'Playfair Display', serif;">

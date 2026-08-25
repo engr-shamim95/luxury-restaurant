@@ -19,6 +19,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        if (request()->hasHeader('CF-Ray')) {
+            \Illuminate\Support\Facades\URL::forceRootUrl('https://restaurant.engrshamim.shop');
+            \Illuminate\Support\Facades\URL::forceScheme('https');
+        }
+
         \Illuminate\Support\Facades\View::composer('*', function ($view) {
             try {
                 $siteName = \App\Models\Setting::get('restaurant_name')

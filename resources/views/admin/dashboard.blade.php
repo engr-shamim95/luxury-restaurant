@@ -94,7 +94,7 @@
             </div>
 
             <!-- Recent Orders Section -->
-            <div class="bg-white shadow-sm rounded-lg overflow-hidden">
+            <div class="bg-white shadow-sm rounded-lg overflow-hidden overflow-x-auto">
                 <div class="p-6 border-b border-gray-100 flex justify-between items-center">
                     <h3 class="font-semibold text-lg text-gray-800">{{ __('Recent Orders') }}</h3>
                     <a href="{{ route('admin.orders.index') }}" class="text-sm font-medium text-indigo-600 hover:text-indigo-800">
