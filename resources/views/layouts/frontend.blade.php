@@ -47,8 +47,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <!-- Brand / Logo -->
-                <div class="flex items-center gap-3">
-                    <a href="{{ route('home') }}" class="flex items-center gap-3 group">
+                <div class="flex items-center gap-3 min-w-0">
+                    <a href="{{ route('home') }}" class="flex items-center gap-3 group min-w-0">
                         @if($siteLogo)
                             <img src="{{ $siteLogo }}" alt="{{ $siteName }}" class="h-10 w-auto object-contain">
                         @else
@@ -56,8 +56,8 @@
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
                             </div>
                         @endif
-                        <div class="flex flex-col">
-                            <span class="font-extrabold text-xl sm:text-2xl text-gray-900 tracking-tight leading-tight group-hover:text-amber-600 transition-colors">
+                        <div class="flex flex-col min-w-0">
+                            <span class="font-extrabold text-lg sm:text-2xl text-gray-900 tracking-tight leading-tight group-hover:text-amber-600 transition-colors truncate max-w-[130px] sm:max-w-none">
                                 {{ $siteName }}
                             </span>
                             @if($siteTagline)
@@ -81,7 +81,7 @@
                 </nav>
 
                 <!-- Actions: Cart & Auth -->
-                <div class="flex items-center gap-3 sm:gap-4">
+                <div class="flex items-center gap-3 sm:gap-4 shrink-0">
                     <!-- Shopping Cart Button -->
                     <a href="{{ route('cart.index') }}" class="relative inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-600 active:bg-amber-700 text-white font-semibold text-sm shadow-md shadow-amber-500/20 transition-all duration-150 group">
                         <svg class="w-5 h-5 transition-transform group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
